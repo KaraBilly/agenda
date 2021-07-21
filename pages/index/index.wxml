@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class="sliderHon">
+    <view class='showMoney'>
+      <text class='MoneyValue'>￥{{leftValue}}</text>
+      <text class='MoneyValue'>￥{{rightValue}}</text>
+    </view>
+    <view class="sliderView">
+      <slider block-color="orange" bindchange="leftSchange" 
+        min="{{leftMin}}" max="{{leftMax}}" value="{{leftValue}}" 
+        active-color="rgb(243,242,247)" background-color="rgb(243,242,247)"
+        block-size="14" style='width:{{leftWidth}}%;margin-right:0rpx;'/>
+      <slider block-color="orange" bindchange="rightSchange"
+        min="{{rightMin}}" max="{{rightMax}}" value="{{rightValue}}"
+        active-color="rgb(243,242,247)" background-color="rgb(243,242,247)"
+        block-size="14" style='width:{{rightWidth}}%;margin-left:0rpx;'/>
+    </view>
+  </view>
+</view>
